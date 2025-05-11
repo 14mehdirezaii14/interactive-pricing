@@ -1,54 +1,70 @@
-# React + TypeScript + Vite
+# 💵 Interactive Pricing Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A senior-level interactive pricing UI built with **React**, **TypeScript**, **Tailwind CSS (v4.1)**, and a custom hook architecture — designed for performance, clarity, and scalability.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+* 🔥 Fully custom range slider with dynamic fill and animated thumb
+* 💡 Billing toggle (Monthly vs Yearly) with dynamic pricing calculation
+* 🎯 Custom hook (`usePricing`) to isolate business logic from UI
+* 🧩 TailwindCSS v4 with custom theme colors extracted from Figma/mock design
+* ✅ Accessible (screen reader support, semantic HTML)
+* 💎 Modular component structure for scalability and readability
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📁 Project Structure
+
+```bash
+src/
+├── components/          # UI components (Slider, Toggle, etc)
+├── hooks/               # Custom logic (usePricing)
+├── data/                # Static pricing data
+├── types/               # TypeScript types
+├── styles/              # Tailwind entrypoint CSS
+├── App.tsx              # Root app
+└── main.tsx             # Vite entry
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Technologies
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+* [React 18](https://react.dev)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Tailwind CSS v4.1](https://tailwindcss.com/)
+* [Vite](https://vitejs.dev/)
+
+---
+
+## 🧪 How to Run
+
+```bash
+pnpm install
+pnpm run dev
 ```
+
+---
+
+## 🧠 What Makes It Senior-Level?
+
+* 📦 Clear component boundaries with single responsibility
+* 🧠 Business logic abstracted into reusable hooks
+* 🎨 Fully styled with utility-first best practices and custom theme
+* 🧪 Testability & extensibility baked in
+* 🚀 Modern tooling (Vite, pnpm, TypeScript, Tailwind v4)
+
+---
+
+## 📌 Credits
+
+Design inspiration from provided mockup.
+Built with ❤️ by a developer who cares about structure as much as style.
+
+---
+
+## 📤 License
+
+MIT
